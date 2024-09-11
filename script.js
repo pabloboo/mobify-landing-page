@@ -35,3 +35,7 @@ window.addEventListener('keydown', (event) => {
         scrollPrev();
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('page1').scrollIntoView({ behavior: 'smooth' });
+}); 
