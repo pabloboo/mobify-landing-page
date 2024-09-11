@@ -29,9 +29,9 @@ window.addEventListener('wheel', (event) => {
 });
 
 window.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowDown') {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
         scrollNext();
-    } else if (event.key === 'ArrowUp') {
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
         scrollPrev();
     }
 });
