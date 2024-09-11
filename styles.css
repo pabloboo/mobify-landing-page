@@ -96,6 +96,22 @@ img {
     color: #9cd9d3;
 }
 
+/* Animation for first page's bottom arrow */
+#page1 .scroll-arrow-next {
+    animation: moveArrow 1.5s ease-in-out infinite;
+}
+
+/* Animation to move arrow up and down */
+@keyframes moveArrow {
+    0%, 100% {
+        transform: translate(-50%, 0); /* Initial position */
+    }
+    50% {
+        transform: translate(-50%, 10px); /* Move arrow down 10px */
+    }
+}
+
+
 .finish-button {
     position: absolute;
     bottom: 20px;
