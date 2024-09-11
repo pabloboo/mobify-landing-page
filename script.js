@@ -39,3 +39,32 @@ window.addEventListener('keydown', (event) => {
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('page1').scrollIntoView({ behavior: 'smooth' });
 }); 
+
+// Add slide effect on touch devices
+let yDown = null;
+
+document.addEventListener('touchstart', handleTouchStart, false);
+document.addEventListener('touchmove', handleTouchMove, false);
+
+function handleTouchStart(evt) {
+    const firstTouch = evt.touches[0];
+    yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+    if (!yDown) {
+        return;
+    }
+
+    const yUp = evt.touches[0].clientY;
+    const yDiff = yDown - yUp;
+
+    if (Math.abs(yDiff) > 50) { // threshold to detect swipe
+        if (yDiff > 0) { // Swipe up
+            scrollNext();
+        } else { // Swipe down
+            scrollPrev();
+        }
+        yDown = null;
+    }
+}
