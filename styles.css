@@ -27,6 +27,37 @@ body {
     background-color: white;
 }
 
+.hero-section {
+    text-align: center;
+    margin-top: 10vh;
+    animation: fadeIn 2s ease-in;
+}
+  
+.hero-title {
+    font-size: 3.5rem;
+    background: linear-gradient(90deg, #29689d, #9cd9d3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: #a0a0a0;
+    margin-top: 20px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* The text appears moved down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* The text moves to original position */
+    }
+}
+
 .content {
     text-align: center;
     max-width: 90%;
@@ -136,4 +167,11 @@ img {
 
 /* Style for mobile devices */
 @media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem; /* Ajustamos el tamaño del título en pantallas pequeñas */
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem; /* Ajustamos el tamaño del subtítulo en pantallas pequeñas */
+    }
 }
