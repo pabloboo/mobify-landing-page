@@ -96,6 +96,21 @@ img {
     color: #9cd9d3;
 }
 
+.finish-button {
+    position: absolute;
+    bottom: 20px;
+    background-color: #9cd9d3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.finish-button:hover {
+    background-color: #29689d;
+}
+
 /* Style for complete page images */
 .full-image {
     width: 100%;
